@@ -24,6 +24,7 @@ import { ArchitectureDiagram } from './components/ArchitectureDiagram';
 import { ProjectModal } from './components/ProjectModal';
 import { CvModal } from './components/CvModal';
 import { GitHubSection } from './components/GitHubSection';
+import { Analytics } from '@vercel/analytics/react';
 
 type HeroBlueprintKey = 'studyos' | 'vulnweb' | 'water';
 
@@ -1080,6 +1081,9 @@ export default function App() {
 
       {/* EMBEDDED CURRICULUM VITAE PDF MODAL */}
       <CvModal isOpen={isCvModalOpen} onClose={() => setIsCvModalOpen(false)} />
+
+      {/* VERCEL WEB ANALYTICS */}
+      <Analytics />
     </div>
   );
 }
